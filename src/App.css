@@ -1,0 +1,94 @@
+#root {
+ 
+}
+p, a {
+  font-family: 'Uncut Sans',_sans-serif;
+}
+h1,h2 ,h3,h4,h5,h6{
+  font-family: 'Esphimere';
+  text-transform: uppercase;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.switch:hover{
+  cursor: pointer;
+}
+.slider{
+  display: inline-block;
+  width: 40px;
+  height: 18px;
+  background: #000000;
+  position: relative;
+}
+
+.slider:after{
+  content: '';
+  background: #F2F2F2;
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  top: 1px;
+  left: 0;
+  transition: all ease 0.2s;
+  border-radius: 999px;
+}
+
+input:checked + .slider{
+  background-color: #2233B0;            ;
+}
+
+input:checked + .slider:after{
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+@media screen and (min-width: 768px) {
+  .features > div { 
+    flex-basis: calc(50% - 0.625rem);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .features > div { 
+    flex-basis: calc(30% - 0.80rem);
+  }
+}
+
+.flex-important {
+  display: flex !important;
+}

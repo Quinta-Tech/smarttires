@@ -1,0 +1,8 @@
+.card-filter {
+    background: rgb(28,28,28);
+background: linear-gradient(0deg, rgba(28,28,28,1) 0%, rgba(226,226,222,0) 50%, rgba(28, 28, 28, 1) 100%);
+}
+.blog_link::before {
+    color: #ED0C48 ;
+    content: '>>';
+}

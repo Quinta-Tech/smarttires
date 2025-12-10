@@ -1,0 +1,168 @@
+
+  
+@font-face {
+    font-family: 'Esphimere';
+    src: url(../assets/fonts/EsphimereThin.otf) format('opentype');
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    font-display: swap;
+  }
+ @font-face {
+    font-family: 'Esphimere';
+    src: url(./assets/fonts/EsphimereThinItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Esphimere';
+    src: url(../assets/fonts/EsphimereLight.otf) format('opentype');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Esphimere';
+    src: url(../assets/fonts/EsphimereLightItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 300;
+  }
+@font-face {
+    font-family: 'Esphimere';
+    src: url(../assets/fonts/EsphimereSemiBold.otf) format('opentype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: 'Esphimere';
+    src: url(../assets/fonts/EsphimereSemiBold.otf) format('opentype');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Esphimere';
+    src: url(../assets/fonts/EsphimereSemiBoldItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Esphimere';
+    src: url(../assets/fonts/EsphimereBold.otf) format('opentype');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Esphimere';
+    src: url(../assets/fonts/EsphimereBoldItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Esphimere';
+    src: url(../assets/fonts/EsphimereBold.otf) format('opentype');
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Esphimere';
+    src: url(../assets/fonts/EsphimereBoldItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+  } 
+
+
+/*   UNCUT     */
+@font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-Regular.otf) format('opentype');
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    font-display: swap;
+  }
+ @font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-RegularOblique.otf) format('opentype');
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-Regular.otf) format('opentype');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-RegularOblique.otf) format('opentype');
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-Regular.otf) format('opentype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-RegularOblique.otf) format('opentype');
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-Medium.otf) format('opentype');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-MediumOblique.otf) format('opentype');
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-Semibold.otf) format('opentype');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-SemiboldOblique.otf) format('opentype');
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-Bold.otf) format('opentype');
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'Uncut Sans';
+    src: url(../assets/fonts/Uncut-Sans-BoldOblique.otf) format('opentype');
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+  } 

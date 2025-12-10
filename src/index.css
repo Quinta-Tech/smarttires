@@ -1,0 +1,48 @@
+:root {
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+p{
+  font-family: 'Uncut Sans';
+}
+h1,h2, h3,h4,h5,h6{
+  font-family: 'Esphimere';
+  text-transform: uppercase;
+}
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+
+
+
+.bg-radial-gradient {
+  background-color: #3EECAC;
+background-image: linear-gradient(19deg, #94AAEA 0%, #FBB1C5 100%);
+
+}

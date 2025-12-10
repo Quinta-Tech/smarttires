@@ -1,0 +1,28 @@
+
+
+
+#system-showcase 
+.slick-prev::before {
+  color: #1f29374d;
+  font-size: 40px;
+  
+}
+#system-showcase 
+.slick-next::before {
+  color: #1f29374d;
+  font-size: 40px;
+  
+}
+
+#system-showcase  .slick-next {
+  right: 20px;
+  cursor: pointer;
+}
+
+#system-showcase  .slick-prev {
+  left: 5px;
+  cursor: pointer;
+  line-height: none;
+  z-index: 1000;
+}
+
