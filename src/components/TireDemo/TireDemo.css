@@ -369,8 +369,12 @@
 
 /* Specifications Section */
 .specifications-section {
+  width: 100vw;
   padding: 8rem 2rem;
   background: linear-gradient(180deg, #ffffff 0%, #f8f9ff 100%);
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9rem;
 }
 
 .specifications-section h2 {
@@ -391,7 +395,7 @@
 }
 
 .table-container {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
   overflow-x: auto;
   background: white;
@@ -553,12 +557,24 @@
   }
 
   .deslizante-container {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 0;
   }
 
   .deslizante-btn {
     width: 50px;
     height: 50px;
+    position:absolute;
+    top: 50%;
+
+
+
+  }
+    .prev {
+    left: 10px;
+  }
+   .next {
+    right: -10px;
   }
 
   .tire-image {

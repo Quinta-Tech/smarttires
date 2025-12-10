@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import logo from '../assets/logo-full.svg'
 interface RecommendedTireCardProps {
   tire: {
     _id: string;
@@ -70,14 +70,23 @@ const RecommendedTireCard: React.FC<RecommendedTireCardProps> = ({ tire, languag
       <div className="p-6 flex flex-col h-full">
       <div className="space-y-4 flex-1 flex flex-col">
         {/* Imagen del neumático */}
-        <div className="text-center bg-gray-50 rounded-lg p-6 flex items-center justify-center">
+        <div className="relative text-center bg-gray-50 rounded-lg p-6 flex items-center justify-center">
           <img
             src={tire.img}
             alt={`${tire.marca} ${tire.modelo}`}
             className="w-32 h-32 object-contain"
             loading="lazy"
           />
-         
+          <div className="absolute top-2 right-4">
+            <img
+              src={logo}
+              alt="Overlay"
+              className="w-16 h-16 object-contain"
+            />
+          </div>
+          
+
+
         </div>
 
         {/* Detalles del neumático */}

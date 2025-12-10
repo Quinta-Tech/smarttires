@@ -9,6 +9,8 @@ import ButtonGetInTouch from "./ButtonGetInTouch";
 import { LanguageContext } from './LanguageContext';
 import React,{useContext} from "react";
 import { motion } from "framer-motion";
+import logo from "../assets/logo-full.svg";
+
 
 const text_button = {
     es: {
@@ -54,7 +56,7 @@ export default function BeforeAfterSection() {
             "Operadores en situaciones de riesgo",
             "Incertidumbre constante",
           ],
-          after_title: "Con Quinta",
+          after_title: "Con ",
           after_subtitle: "Con Quinta, todo es",
           after_prevention: "prevención",
           after_points: [
@@ -96,7 +98,7 @@ export default function BeforeAfterSection() {
       const [hoveredIndex, setHoveredIndex] = useState(null)
   return (
     <section className=" bg-white relative justify-center">
-      <div className="w-full py-12 md:py-16 px-6 md:px-28 bg-gradient-to-b from-white to-custom-gray-1 ">
+      <div className="w-full py-12 md:py-16 px-6 md:px-28 bg-gradient-to-b from-white to-custom-gray-1  ">
       <div className="container   mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
           {/* ANTES */}
@@ -105,16 +107,16 @@ export default function BeforeAfterSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="bg-custom-gray-1 rounded-xl p-8 relative overflow-hidden border border-custom-gray-2 m-3 "
+            className="bg-gray-100 rounded-xl p-8 relative overflow-hidden border border-gray-300 m-3 opacity-75 border-2 "
           >
-            <h3 className="text-xl md:text-2xl font-bold text-custom-black mb-8">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-500 mb-8">
               {content[language].before_title}
             </h3>
 
             <div className="relative h-64 md:h-80 mb-8 rounded-lg overflow-hidden">
               {/* Aquí van las imágenes */}
               <div className="absolute inset-0  z-10"></div>
-              <div className="grid grid-cols-12 grid-rows-2 gap-4 w-full h-full opacity-70">
+              <div className="grid grid-cols-12 grid-rows-2 gap-4 w-full h-full opacity-70 ">
                 {/* Imagen Grande */}
                 <div
                 className="col-span-12 md:col-span-8 md:row-span-2 relative overflow-hidden bg-black/50 object-cover rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_80px_-10px_rgba(34,51,176,0.5)]"
@@ -164,21 +166,21 @@ export default function BeforeAfterSection() {
                 </div>
 
               
-              </div>
+              </div> 
             </div>
 
-            <h4 className="text-lg md:text-xl/relaxed lg:text-2xl  tracking-tighter text-balance leading-relaxed font-bold text-custom-black mb-4">
+            <h4 className="text-lg md:text-xl/relaxed lg:text-2xl  tracking-tighter text-balance leading-relaxed font-bold text-gray-500 mb-4">
               {content[language].before_subtitle}{" "}
               <span className="bg-danger-L400 px-2 py-1 text-white">
                 {content[language].before_reaction}
               </span>
             </h4>
 
-            <ul className="space-y-4 text-gray-300">
+            <ul className="space-y-4 text-gray-500">
               {content[language].before_points.map((point, index) => (
                 <li key={index} className="flex items-start">
                   <AlertTriangle className="w-5 h-5 text-danger-L400 mr-2 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700 text-base md:text-lg/relaxed lg:xl font-normal">{point}</span>
+                  <span className="text-gray-500 text-base md:text-lg/relaxed lg:xl font-normal">{point}</span>
                 </li>
               ))}
             </ul>
@@ -191,11 +193,18 @@ export default function BeforeAfterSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="bg-primary-B rounded-xl p-8 relative overflow-hidden border border-[#3447D8]/30 transform scale-110 "
+            className="bg-primary-L200 rounded-xl p-8 relative overflow-hidden border border-primary-L400 border-2 transform scale-110 "
           >
-            <h3 className="text-lg md:text-xl/relaxed lg:text-2xl  font-bold text-white mb-8 ">
+            <div className="flex items-center   space-x-4 mb-3"> 
+            <h3 className="text-lg md:text-xl/relaxed lg:text-2xl  font-bold text-black  ">
               {content[language].after_title}
             </h3>
+            <img src={logo} alt="quinta" className=" 
+            
+            w-26 md:w-40
+            "/>
+            </div>
+           
 
             <div className="relative h-64 md:h-80 mb-8 rounded-lg overflow-hidden">
               {/* Aquí van las imágenes */}
@@ -233,7 +242,7 @@ export default function BeforeAfterSection() {
               <div className="absolute top-3/4 right-1/2 w-8 h-8 rounded-full bg-primary-L400/80 border-2 border-white animate-pulse"></div>
             </div>
 
-            <h4 className="text-lg md:text-xl/relaxed lg:text-2xl font-normaltracking-tighter text-balance leading-relaxed font-bold text-white-B mb-4">
+            <h4 className="text-lg md:text-xl/relaxed lg:text-2xl font-normaltracking-tighter text-balance leading-relaxed font-bold text-black mb-4">
               {content[language].after_subtitle}{" "}
               <span className="bg-info-L400 px-2 py-1 text-white ">
                 {content[language].after_prevention}
@@ -246,7 +255,7 @@ export default function BeforeAfterSection() {
                   <div className="w-5 h-5 rounded-full bg-info-L400 mr-2 mt-1 flex-shrink-0 flex items-center justify-center">
                     <span className="text-white text-xs">✓</span>
                   </div>
-                  <span className="text-base md:text-lg/relaxed lg:xl font-normal">{point}</span>
+                  <span className="text-base md:text-lg/relaxed lg:xl font-normal text-gray-800">{point}</span>
                 </li>
               ))}
             </ul>

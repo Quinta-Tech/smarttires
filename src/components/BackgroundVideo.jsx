@@ -9,7 +9,7 @@ const BackgroundVideo = () => {
             <source src={backgroundVideo} type="video/mp4"></source>
             Your browser does not support the video tag.
             </video>
-            <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-65 "></div>
+            <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 "></div>
         </div>
     );
 }

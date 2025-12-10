@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Wifi, Database, Brain, Gauge } from 'lucide-react';
 import './TireDemo.css';
+import ButtonGetInTouch from '../../components/ButtonGetInTouch'
 
 interface TirePoint {
   number: string;
@@ -71,7 +72,7 @@ export default function TireDemo({
   return (
     <div className="tire-demo-container">
       {/* Hero Section */}
-      <motion.section 
+     <motion.section 
         className="hero-section"
         style={{ backgroundImage: `url(${heroImage})` }}
         initial={{ opacity: 0 }}
@@ -100,12 +101,16 @@ export default function TireDemo({
           >
             {description}
           </motion.p>
+          <div className="hero-cta  flex items-center justify-center mt-6">
+          <ButtonGetInTouch theme="light" />
+          </div>
         </div>
+        
         <div className="hero-overlay"></div>
       </motion.section>
-
+ 
       {/* Smart Technology Section */}
-      <section className="smart-tech-section">
+       <section className="smart-tech-section">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +159,7 @@ export default function TireDemo({
             </motion.div>
           </div>
         </motion.div>
-      </section>
+      </section> 
 
       {/* Advantages Section */}
       <section className="advantages-section">
@@ -302,9 +307,12 @@ export default function TireDemo({
           ))}
         </div>
       </section>
+    
+   
+
 
       {/* Specifications Section */}
-      <section className="specifications-section">
+     <section className="specifications-section">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
