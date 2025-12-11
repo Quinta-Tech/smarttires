@@ -190,7 +190,6 @@
   width: 500px;
   height: 500px;
   object-fit: contain;
-  filter: drop-shadow(0 20px 60px rgba(34, 51, 176, 0.3));
   animation: floatTire 4s ease-in-out infinite;
 }
 

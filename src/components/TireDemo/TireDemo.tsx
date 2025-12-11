@@ -340,7 +340,7 @@ export default function TireDemo({
                 <th>Velocidad</th>
                 <th>Diámetro (pulg)</th>
                 <th>Ancho (pulg)</th>
-                <th>Prof. (32avos)</th>
+                <th>Prof.</th>
                 <th>RIM</th>
                 <th>Presión Individual</th>
                 <th>Presión Doble</th>
@@ -368,7 +368,7 @@ export default function TireDemo({
                   <td>{spec.velocidad}</td>
                   <td>{spec.diametro}</td>
                   <td>{spec.ancho}</td>
-                  <td>{spec.profundidad}</td>
+                  <td>{spec.profundidad_mm}</td>
                   <td>{spec.rim}</td>
                   <td>{spec.presionIndividual}</td>
                   <td>{spec.presionDoble}</td>

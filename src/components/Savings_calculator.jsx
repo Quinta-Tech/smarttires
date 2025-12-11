@@ -3,7 +3,7 @@
 import { useInView } from "react-intersection-observer"
 import CountUp from "react-countup"
 import { DollarSign, TrendingUp, Droplet, Wrench, Shield } from "lucide-react"
-import tire_tpms from "../assets/neumatico.png"
+import tire_tpms from "../assets/tire_sensor.png"
 import { useContext } from "react";
 import { LanguageContext } from "./LanguageContext";
 import { motion } from "framer-motion";
