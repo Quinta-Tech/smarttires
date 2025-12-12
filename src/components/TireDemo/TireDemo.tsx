@@ -195,48 +195,7 @@ export default function TireDemo({
                   />
                   
                   {/* Data Transmission Animation for last slide */}
-                  {currentSlide === slides.length - 1 && (
-                    <div className="data-transmission">
-                      {[...Array(8)].map((_, i) => (
-                        <motion.div
-                          key={i}
-                          className="data-particle"
-                          initial={{ 
-                            y: 0, 
-                            x: 0,
-                            opacity: 0,
-                            scale: 0
-                          }}
-                          animate={{ 
-                            y: [-100, -200, -300],
-                            x: [0, (i % 2 === 0 ? 20 : -20), (i % 2 === 0 ? 40 : -40)],
-                            opacity: [0, 1, 0],
-                            scale: [0, 1, 0.5]
-                          }}
-                          transition={{
-                            duration: 2.5,
-                            delay: i * 0.3,
-                            repeat: Infinity,
-                            ease: "easeOut"
-                          }}
-                        />
-                      ))}
-                      <motion.div
-                        className="wifi-icon"
-                        animate={{ 
-                          scale: [1, 1.1, 1],
-                          opacity: [0.7, 1, 0.7]
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          ease: "easeInOut"
-                        }}
-                      >
-                        <Wifi size={40} />
-                      </motion.div>
-                    </div>
-                  )}
+                
                   
                   {slides[currentSlide].points.map((point, index) => (
                     <motion.div
