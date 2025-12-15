@@ -25,7 +25,7 @@ export default function Footer() {
         }
     }
     return (
-        <footer className=" text-white  bg-custom-neutro relative  w-screen p-12">
+        <footer className=" text-white  bg-custom-neutro relative  w-full p-12">
             <div className="flex-none md:flex justify-between">
                 <div className="grid grid-cols-1 content-start content-between text-custom-black mb-12 md:mb-0">
                     <img src={logo} alt="logo"  

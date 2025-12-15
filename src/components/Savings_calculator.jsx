@@ -182,7 +182,7 @@ export default function SavingsCalculatorSection() {
                   <div className="text-2xl font-bold text-gray-800">
                     {content[language].total_savings}
                   </div>
-                  <div className="text-4xl font-bold text-gray-800">
+                  <div className="text-2xl md:text-4xl font-bold text-gray-800">
                     {inView ? <CountUp end={content[language].total} duration={1} separator="," /> : 0}
                     <span className="ml-1 text-gray-600">{content[language].sufix}</span>
                   </div>

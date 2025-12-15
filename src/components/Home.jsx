@@ -110,7 +110,7 @@ const Home = () => {
   }
     return (
       <>
-        <div className="relative h-screen  w-screen">
+        <div className="relative h-screen  w-full">
           <BackgroundVideo />
           <div className="relative z-10 flex justify-center h-full">
             <div className="m-auto text-center py-6 px-6 md:py-12  md:px-28">
