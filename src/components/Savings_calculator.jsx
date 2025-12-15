@@ -2,7 +2,7 @@
 
 import { useInView } from "react-intersection-observer"
 import CountUp from "react-countup"
-import { DollarSign, TrendingUp, Droplet, Wrench, Shield } from "lucide-react"
+import { TrendingUp, Droplet, Wrench, Shield } from "lucide-react"
 import tire_tpms from "../assets/tire_sensor.png"
 import { useContext } from "react";
 import { LanguageContext } from "./LanguageContext";
@@ -176,7 +176,6 @@ export default function SavingsCalculatorSection() {
                   </div>
                 ))}
 
-                {/* Ahorro total */}
                 <div
                   className="flex items-center justify-between pt-2"
                 >
@@ -212,14 +211,12 @@ const MetricCard = ({ icon: Icon, title, subtitle, value, suffix, bgColor = "bg-
         <div className={`w-10 h-10 flex items-center justify-center rounded-full ${bgColor}`}>
           <Icon className={`h-5 w-5 ${iconColor}`} />
         </div>
-        <div>
-          <p className="text-gray-800 font-medium " >{title}</p>
-        </div>
-        <div>
-          <p className="text-gray-500 text-sm">{subtitle}</p>
+        <div className="flex flex-col">
+          <p className="text-gray-800 font-medium">{title}</p>
+          {subtitle && <p className="text-gray-500 text-sm">{subtitle}</p>}
         </div>
       </div>
-      <div className="text-2xl font-bold text-gray-800">
+      <div className=" text-xl md:text-2xl font-bold text-gray-800">
         {inView ? <CountUp end={value} duration={1} separator="," /> : 0}
         {suffix && <span className="ml-1 text-gray-600">{suffix}</span>}
       </div>
