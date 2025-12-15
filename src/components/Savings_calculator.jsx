@@ -37,7 +37,7 @@ export default function SavingsCalculatorSection() {
         },
         {
           icon: Shield,
-          title: "En llantas voladas/talachas/robos",
+          title: "En llantas voladas / talachas / robos",
           subtitle: "",
           value: 300,
           suffix: "MXN",
@@ -114,7 +114,7 @@ export default function SavingsCalculatorSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center mb-6"
           >
-            <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl  text-balance leading-relaxed text-custom-black mb-4">
+            <h2 className="font-bold text-2xl md:text-3xl  text-balance leading-relaxed text-custom-black mb-4">
               {content[language].title}
             </h2>
             <p className="mx-auto max-w-[700px] md:text-xl/relaxed text-lg font-normal text-gray-600">

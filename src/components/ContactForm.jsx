@@ -109,7 +109,7 @@ const ContactForm = () => {
     return (
         <>
         <div className="relative  w-screen bg-neutral-L200 contact">
-            <h2 className="flex justify-center block text-base md:text-2xl font-medium text-gray-700 font-['Uncut Sans',_sans-serif] pt-24">
+            <h2 className="flex justify-center block text-base md:text-2xl font-medium text-gray-700 font-['Uncut Sans',_sans-serif] pt-24 pl-6">
             {language === 'es' ? 'Contacta con nosotros para obtener más información' : 'Contact us for more information'}
             </h2>
             <div className="relative  z-10 flex justify-center h-full bg-gradient-to-b from-custom-gray-2 to-custom-gray-1">
