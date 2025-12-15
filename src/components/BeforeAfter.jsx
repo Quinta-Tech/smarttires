@@ -201,7 +201,7 @@ export default function BeforeAfterSection() {
             </h3>
             <img src={logo} alt="quinta" className=" 
             
-            w-26 md:w-40
+            w-24 md:w-40
             "/>
             </div>
            
