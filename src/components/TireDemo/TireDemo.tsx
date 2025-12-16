@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Wifi, Database, Brain, Gauge } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Wifi, Database, Gauge } from 'lucide-react';
 import './TireDemo.css';
-import ButtonGetInTouch from '../../components/ButtonGetInTouch'
+import ButtonGetInTouch from '../../components/ButtonGetInTouch';
+import { LanguageContext } from '../LanguageContext';
 
 interface TirePoint {
   number: string;
@@ -54,6 +55,70 @@ export default function TireDemo({
 }: TireDemoProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const { language } = useContext(LanguageContext);
+
+  const content = {
+    es: {
+      smartTechTitle: "Tecnología Inteligente Integrada",
+      sensorTitle: "Sensor Interno",
+      sensorDescription: "Recopila datos en tiempo real sobre presión, temperatura y desgaste del neumático",
+      transmissionTitle: "Transmisión en Tiempo Real",
+      transmissionDescription: "Los datos son enviados instantáneamente a servidores en la nube para análisis continuo",
+      decisionsTitle: "Toma de Decisiones",
+      decisionsDescription: "Alertas y recomendaciones inteligentes para maximizar la vida útil y seguridad",
+      advantagesTitle: "Ventajas",
+      specificationsTitle: "Especificaciones",
+      scrollHint: "← Desliza para ver más →",
+      tableHeaders: {
+        codigo: "Código",
+        tamano: "Tamaño",
+        calificacion: "Cal. Numeral",
+        rango: "Rango",
+        carga: "Índice Carga",
+        velocidad: "Velocidad",
+        diametro: "Diámetro (pulg)",
+        ancho: "Ancho (pulg)",
+        profundidad: "Prof.",
+        rim: "RIM",
+        presionIndividual: "Presión Individual",
+        presionDoble: "Presión Doble",
+        radio: "Radio",
+        revoluciones: "Rev/Milla",
+        peso: "Peso",
+        tipo: "Tipo"
+      }
+    },
+    en: {
+      smartTechTitle: "Integrated Smart Technology",
+      sensorTitle: "Internal Sensor",
+      sensorDescription: "Collects real-time data on tire pressure, temperature and wear",
+      transmissionTitle: "Real-Time Transmission",
+      transmissionDescription: "Data is sent instantly to cloud servers for continuous analysis",
+      decisionsTitle: "Decision Making",
+      decisionsDescription: "Smart alerts and recommendations to maximize tire life and safety",
+      advantagesTitle: "Advantages",
+      specificationsTitle: "Specifications",
+      scrollHint: "← Swipe to see more →",
+      tableHeaders: {
+        codigo: "Code",
+        tamano: "Size",
+        calificacion: "Rating",
+        rango: "Range",
+        carga: "Load Index",
+        velocidad: "Speed",
+        diametro: "Diameter (in)",
+        ancho: "Width (in)",
+        profundidad: "Depth",
+        rim: "RIM",
+        presionIndividual: "Single Pressure",
+        presionDoble: "Dual Pressure",
+        radio: "Radius",
+        revoluciones: "Rev/Mile",
+        peso: "Weight",
+        tipo: "Type"
+      }
+    }
+  };
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -102,7 +167,9 @@ export default function TireDemo({
             {description}
           </motion.p>
           <div className="hero-cta  flex items-center justify-center mt-6">
-          <ButtonGetInTouch theme="light" />
+          <ButtonGetInTouch theme="light">
+            {language === 'es' ? 'Contactar' : 'Get in Touch'}
+          </ButtonGetInTouch>
           </div>
         </div>
         
@@ -118,7 +185,7 @@ export default function TireDemo({
           transition={{ duration: 0.8 }}
           className="smart-tech-content"
         >
-          <h2>Tecnología Inteligente Integrada</h2>
+          <h2>{content[language].smartTechTitle}</h2>
           <div className="tech-grid">
             <motion.div 
               className="tech-card"
@@ -128,8 +195,8 @@ export default function TireDemo({
               <div className="tech-icon">
                 <Wifi size={40} />
               </div>
-              <h3>Sensor Interno</h3>
-              <p>Recopila datos en tiempo real sobre presión, temperatura y desgaste del neumático</p>
+              <h3>{content[language].sensorTitle}</h3>
+              <p>{content[language].sensorDescription}</p>
             </motion.div>
 
             <motion.div 
@@ -140,8 +207,8 @@ export default function TireDemo({
               <div className="tech-icon">
                 <Database size={40} />
               </div>
-              <h3>Transmisión en Tiempo Real</h3>
-              <p>Los datos son enviados instantáneamente a servidores en la nube para análisis continuo</p>
+              <h3>{content[language].transmissionTitle}</h3>
+              <p>{content[language].transmissionDescription}</p>
             </motion.div>
 
          
@@ -154,8 +221,8 @@ export default function TireDemo({
               <div className="tech-icon">
                 <Gauge size={40} />
               </div>
-              <h3>Toma de Decisiones</h3>
-              <p>Alertas y recomendaciones inteligentes para maximizar la vida útil y seguridad</p>
+              <h3>{content[language].decisionsTitle}</h3>
+              <p>{content[language].decisionsDescription}</p>
             </motion.div>
           </div>
         </motion.div>
@@ -169,7 +236,7 @@ export default function TireDemo({
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {modelName} Ventajas
+          {modelName} {content[language].advantagesTitle}
         </motion.h2>
 
         <div className="deslizante-container">
@@ -278,35 +345,41 @@ export default function TireDemo({
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {modelName} Especificaciones
+          {modelName} {content[language].specificationsTitle}
         </motion.h2>
 
         <motion.div 
-          className="table-container"
+          className="table-wrapper"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <table className="specs-table">
+          {/* Scroll hint for mobile */}
+          <div className="scroll-hint">
+            <span>{content[language].scrollHint}</span>
+          </div>
+          
+          <div className="table-container">
+            <table className="specs-table">
             <thead>
               <tr>
-                <th>Código</th>
-                <th>Tamaño</th>
-                <th>Cal. Numeral</th>
-                <th>Rango</th>
-                <th>Índice Carga</th>
-                <th>Velocidad</th>
-                <th>Diámetro (pulg)</th>
-                <th>Ancho (pulg)</th>
-                <th>Prof.</th>
-                <th>RIM</th>
-                <th>Presión Individual</th>
-                <th>Presión Doble</th>
-                <th>Radio</th>
-                <th>Rev/Milla</th>
-                <th>Peso</th>
-                <th>Tipo</th>
+                <th>{content[language].tableHeaders.codigo}</th>
+                <th>{content[language].tableHeaders.tamano}</th>
+                <th>{content[language].tableHeaders.calificacion}</th>
+                <th>{content[language].tableHeaders.rango}</th>
+                <th>{content[language].tableHeaders.carga}</th>
+                <th>{content[language].tableHeaders.velocidad}</th>
+                <th>{content[language].tableHeaders.diametro}</th>
+                <th>{content[language].tableHeaders.ancho}</th>
+                <th>{content[language].tableHeaders.profundidad}</th>
+                <th>{content[language].tableHeaders.rim}</th>
+                <th>{content[language].tableHeaders.presionIndividual}</th>
+                <th>{content[language].tableHeaders.presionDoble}</th>
+                <th>{content[language].tableHeaders.radio}</th>
+                <th>{content[language].tableHeaders.revoluciones}</th>
+                <th>{content[language].tableHeaders.peso}</th>
+                <th>{content[language].tableHeaders.tipo}</th>
               </tr>
             </thead>
             <tbody>
@@ -327,7 +400,7 @@ export default function TireDemo({
                   <td>{spec.velocidad}</td>
                   <td>{spec.diametro}</td>
                   <td>{spec.ancho}</td>
-                  <td>{spec.profundidad_mm}</td>
+                  <td>{spec.profundidad}</td>
                   <td>{spec.rim}</td>
                   <td>{spec.presionIndividual}</td>
                   <td>{spec.presionDoble}</td>
@@ -338,7 +411,8 @@ export default function TireDemo({
                 </motion.tr>
               ))}
             </tbody>
-          </table>
+            </table>
+          </div>
         </motion.div>
       </section>
     </div>

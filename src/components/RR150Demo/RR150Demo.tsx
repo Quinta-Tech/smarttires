@@ -1,15 +1,20 @@
+import { useContext } from 'react';
 import TireDemo from '../TireDemo/TireDemo';
 import { rr150Data } from '../TireDemo/data/rr150Data';
+import { LanguageContext } from '../LanguageContext';
 
 export default function RR150Demo() {
+  const { language } = useContext(LanguageContext);
+  const currentData = rr150Data[language];
+
   return (
     <TireDemo
-      modelName={rr150Data.modelName}
-      subtitle={rr150Data.subtitle}
-      description={rr150Data.description}
-      heroImage={rr150Data.heroImage}
-      slides={rr150Data.slides}
-      specifications={rr150Data.specifications}
+      modelName={currentData.modelName}
+      subtitle={currentData.subtitle}
+      description={currentData.description}
+      heroImage={currentData.heroImage}
+      slides={currentData.slides}
+      specifications={currentData.specifications}
     />
   );
 }
