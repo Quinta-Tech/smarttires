@@ -1,5 +1,5 @@
 // Configuración de Google Analytics
-const GA_MEASUREMENT_ID = 'G-PN1D3YYQMT';
+const GA_MEASUREMENT_ID = 'G-G43KBLNF35';
 
 // Función helper para gtag
 const gtag = (...args) => {
