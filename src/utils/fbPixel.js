@@ -1,7 +1,7 @@
 import ReactPixel from 'react-facebook-pixel';
 
 // Configuración del pixel de Meta
-const PIXEL_ID =  '1489743785664515';
+const PIXEL_ID =  '4228083874172034';
 
 const options = {
   autoConfig: true, // set pixel's autoConfig
