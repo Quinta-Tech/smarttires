@@ -189,7 +189,7 @@ export default function SavingsCalculatorSection() {
               </div>
             </motion.div>
           </div>
-        </div>
+     
       </div>
     </section>
   )

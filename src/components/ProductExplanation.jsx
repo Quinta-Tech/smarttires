@@ -134,7 +134,6 @@ export default function ProductExplanation() {
             ))}
           </div>
         </div>
-        </div>
       </section>
     </>
   )
