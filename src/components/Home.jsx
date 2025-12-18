@@ -4,7 +4,7 @@ import ButtonGetInTouch from "./ButtonGetInTouch";
 import Blogs from "./Blogs";
 import CalendlyWidget from './CalendlyWidget';
 import { LanguageContext } from './LanguageContext';
-import BannerClients from "./BannerClients";
+
 import logo_blanco from "../assets/logo_blanco.png";
 import { Truck, Route, DollarSign, Users, Gauge, Thermometer, Weight, Ruler  } from "lucide-react"
 import BeforeAfterSection from "./BeforeAfter";
@@ -16,7 +16,7 @@ import SeccionQuinta from "./QuintaSection";
 import { motion } from "framer-motion";
 import SystemShowcase from "./SystemShowcase";
 import { usePageTracking } from '../hooks/usePageTracking';
-import { fbPixelEvents } from '../utils/fbPixel';
+
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import ContactForm from "./ContactForm";
 import RecommendedTires from "./RecommendedTires";
@@ -28,7 +28,7 @@ const Home = () => {
   usePageTracking('Home Page');
   
   // Tracking de página - Google Analytics
-  const { trackSection } = useGoogleAnalytics('Home Page');
+  useGoogleAnalytics('Home Page');
   const content = {
     es: {
       home_title: (
@@ -110,10 +110,10 @@ const Home = () => {
   }
     return (
       <>
-        <div className="relative h-screen  w-full">
+        <div className="relative h-screen w-full">
           <BackgroundVideo />
           <div className="relative z-10 flex justify-center h-full">
-            <div className="m-auto text-center py-6 px-6 md:py-12  md:px-28">
+            <div className="m-auto text-center py-6 px-6 md:py-12 md:px-28 max-w-7xl">
             <h1 className="text-white text-balance text-4xl md:text-5xl lg:text-6xl font-light uppercase leading-none mb-8 md:max-w-[850px] lg:max-w-5xl  mx-auto" >{content[language].home_title}</h1>
             <p className="font-['Uncut Sans',_sans-serif]  text-lg md:text-lg lg:text-xl text-gray-200 mx-auto font-normal md:max-w-[700px]">{content[language].home_description} </p> 
             <div className="flex items-center gap-4 md:gap-6 max-w-4xl mt-6 flex-wrap mx-auto justify-center">
@@ -152,8 +152,8 @@ const Home = () => {
         <BeforeAfterSection />
         <SeccionQuinta />
         <ProductExplanation />
-        <section className="w-full  bg-white relative">
-        <div className="bg-gradient-to-b from-custom-gray-1 to-white relative pb-12 pb-16 md:pb-24 px-2 md:px-28">
+        <section className="w-full bg-white relative">
+        <div className="bg-gradient-to-b from-custom-gray-1 to-white relative pb-12 md:pb-16 lg:pb-24 px-2 md:px-28 max-w-7xl mx-auto">
         <motion.div className="text-center mb-8"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -174,8 +174,8 @@ const Home = () => {
         <MobileApp /> */}
         <RecommendedTires />
         <SavingsCalculatorSection />
-         <div className=' relative   px-6  md:px-28 py-12 md:py-16  bg-white'>
-          <motion.div className="bg-primary-B  px-6 md:px-16 py-12 rounded-3xl container mx-auto"
+         <div className="relative px-6 md:px-28 py-12 md:py-16 bg-white">
+          <motion.div className="bg-primary-B px-6 md:px-16 py-12 rounded-3xl max-w-6xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

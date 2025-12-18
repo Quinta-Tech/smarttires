@@ -43,7 +43,7 @@ export default function BannerClients(){
       ];
     
     return (
-        <section className="bg-white py-12 px-6 relative  w-screen">
+        <section className="bg-white py-12 px-6 relative w-full">
           <motion.h2
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

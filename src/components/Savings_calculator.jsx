@@ -104,9 +104,8 @@ export default function SavingsCalculatorSection() {
       const metrics = content[language].metrics;
 
   return (
-    <section className="w-full  bg-white relative">
-      <div className=" py-12 md:py-16 px-6 md:px-28">
-        <div className="container mx-auto">
+    <section className="w-full bg-white relative">
+      <div className="py-12 md:py-16 px-6 md:px-28 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

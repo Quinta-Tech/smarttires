@@ -71,10 +71,8 @@ export default function ProductExplanation() {
       ]
   return (
     <>  
-      <section className="w-full  bg-white relative">
-        <div className="bg-gradient-to-b from-white to-custom-gray-1  py-12 py-12 md:py-16 px-6 md:px-28">
-
-        <div className="container mx-auto ">
+      <section className="w-full bg-white relative">
+        <div className="bg-gradient-to-b from-white to-custom-gray-1 py-12 md:py-16 px-6 md:px-28 max-w-7xl mx-auto">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <motion.div className="space-y-2"
              initial={{ opacity: 0, y: 50 }}

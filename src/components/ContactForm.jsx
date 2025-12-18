@@ -108,13 +108,12 @@ const ContactForm = () => {
     }
     return (
         <>
-        <div className="relative  w-full bg-neutral-L200 contact">
+        <div className="relative w-full bg-neutral-L200 contact">
             <h2 className="flex justify-center block text-base md:text-2xl font-medium text-gray-700 font-['Uncut Sans',_sans-serif] pt-24 pl-6">
             {language === 'es' ? 'Contacta con nosotros para obtener más información' : 'Contact us for more information'}
             </h2>
-            <div className="relative  z-10 flex justify-center h-full bg-gradient-to-b from-custom-gray-2 to-custom-gray-1">
-              
-                <div className="  flex relative bg-white w-11/12 md:w-8/12 my-10 rounded-2xl border border-slate-200 shadow-lg"> 
+            <div className="relative z-10 flex justify-center h-full bg-gradient-to-b from-custom-gray-2 to-custom-gray-1">
+                <div className="flex relative bg-white w-11/12 md:w-8/12 max-w-4xl my-10 rounded-2xl border border-slate-200 shadow-lg"> 
                 <div className="w-full   m-10">
                 {isSubmitted ? ( // Mostrar mensaje de confirmación si se envió correctamente
                 <div className="flex flex-col items-center">
