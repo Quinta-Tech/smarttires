@@ -32,7 +32,7 @@ export default function ButtonGetInTouch({theme, children}) {
 
     return (
         <>
-    {theme  === 'light' && ( <button target='_blank' aria-label="Get in touch" onClick={handleClick} type="button" className=" text-custom-primary bg-white  focus:ring-4 focus:outline-none focus:ring-custom-primary  font-medium rounded-full text-md  md:text-xl px-6 py-3  flex justify-center transition duration-300 ease-in-out" >
+    {theme  === 'light' && ( <button target='_blank' aria-label="Get in touch" onClick={handleClick} type="button" className="px-6 py-3 border-2 border-white rounded-full font-medium font-['Uncut Sans'] uppercase  tracking-wide text-md md:text-xl   text-white  mx-auto text-center hover:bg-white  hover:text-black transition duration-300 ease-in-out " >
         <div className="flex items-center">
 
         <p className="mr-2 font-medium font-['Uncut Sans'] uppercase  tracking-wide" > {children ? children : content[language].contact} </p>   

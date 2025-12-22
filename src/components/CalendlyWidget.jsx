@@ -42,7 +42,7 @@ const CalendlyWidget = ({theme}) => {
   return (
     <>
     {theme === 'light' && (
-       <a href="" className="px-6 py-3 border-2 border-white rounded-full font-medium font-['Uncut Sans'] uppercase  tracking-wide text-md md:text-xl  hover:text-white text-white  mx-auto text-center hover:bg-white  hover:text-black transition duration-300 ease-in-out  "
+       <a href="" className="px-6 py-3 border-2 border-white rounded-full font-medium font-['Uncut Sans'] uppercase  tracking-wide text-md md:text-xl   text-white  mx-auto text-center hover:bg-white  hover:text-black transition duration-300 ease-in-out  "
        onClick={handleClick}>
           <i className="fa-regular fa-calendar mr-2"></i>
           {content[language]}
